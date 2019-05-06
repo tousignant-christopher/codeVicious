@@ -5,7 +5,6 @@
 
     <table class="widefat importers striped">
         <tbody>
-        <!--
             <tr class="importer-item">
                 <td class="import-system">
                     <span class="importer-title">Post Types</span>
@@ -19,7 +18,6 @@
                     <span class="importer-desc">Create and Edit Custom Post Types. Attach custom views to the archive page and single post pages. Attach taxonomies.</span>
                 </td>
             </tr>
-        -->
         </tbody>
     </table>
 </div>

@@ -50,8 +50,25 @@ class Page extends Subpage
      */
     protected function enqueue():\Closure
     {
-        return function () {
-            return null;
+        return function ( $hook ) {
+            if( "dev-tools_page_dev_tools__post_types" == $hook ) :
+                wp_enqueue_style(
+                    "admin-post-type",
+                    get_template_directory_uri() . "/App_Code/Admin/Modules/Post_Types/assets/build/css/main.css",
+                    false,
+                    "1.0",
+                    "all"
+                );
+
+                wp_enqueue_script(
+                    "admin-post-type",
+                    get_template_directory_uri() . "/App_Code/Admin/Modules/Post_Types/assets/build/js/main.js",
+                    [ "jquery" ],
+                    "1.0",
+                    true
+                );
+
+            endif;
         };
     }
 
